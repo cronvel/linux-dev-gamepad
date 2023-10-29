@@ -76,6 +76,10 @@ Gamepad.prototype.onData = function( buffer ) {
 				this.emit( 'axis' , id , value , timeStamp ) ;
 				break ;
 			}
+			default : {
+				this.emit( 'unknown_' + type , id , value , timeStamp ) ;
+				break ;
+			}
 		}
 	}
 } ;
